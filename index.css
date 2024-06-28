@@ -4,9 +4,16 @@
 html {
   font-family: sans-serif;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Oxygen", sans-serif;
+}
 .maxwidth {
   max-width: 70.25em;
   /* aq eu falei q a largura maxima do meu header e 70.25, criei uma class dps de outra class só pra isso */
+  margin: auto;
 }
 .main-header {
   text-align: center;
@@ -18,6 +25,7 @@ html {
   list-style-type: none;
   padding: 0;
   /* sempre q for tirar os botao e zerar o padding tem q ser na ul */
+  margin-bottom: 0;
 }
 .main-nav a {
   color: white;
@@ -49,5 +57,65 @@ html {
   }
   .logo {
     margin-left: 1.5em;
+  }
+}
+.hero-banner {
+  text-align: center;
+  background-color: #5a48486e;
+  padding: 1em;
+}
+.herobanner_icon {
+  height: 5em;
+  width: 5em;
+  display: none;
+}
+.hero-title {
+  color: var(--primary-color);
+  padding: 0.5em 0 0.5em;
+  font-size: 1.5em;
+  margin: 1.3em 0;
+}
+.hero-subtitle {
+  color: color-mix(in srgb, var(--primary-color), white 30%);
+  margin: 0 0 1.3em;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.hero-banner_btn {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 255, 255, 0.534);
+  padding: 1em 2.2em;
+  border-radius: 5px;
+  display: inline-block;
+}
+@media screen and (min-width: 48.75em) {
+  .hero-banner {
+    background-color: var(--primary-color);
+  }
+  .hero-title,
+  .hero-subtitle {
+    color: white;
+  }
+  .herobanner_icon {
+    margin: auto;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 56.25em) {
+  .hero-banner {
+    background-image: url(ProjetoAngelsHosters-inicio/images/bg_topo_1198x670.jpg);
+    /* usei esse aspect ratio pq pega um elemento html e aumenta ou diminui numa mesma proporção, aumenta proporcionalmente uma div por ex, nesse caso peguei o hero banner e pedi pra ele aumentar ou diminuir proporcionalmente */
+    aspect-ratio: 1198 / 670;
+    display: flex;
+    /* se eu tivesse apenas o display flex o meu hero banner ia ta de acordo enqto eu amplio a tela, porem eu falei q no meu maxwidth o width é de 75% logo precisei falar q a margin voltaria ao normal, e falei pra ter um justify center e um aling no final, mas se eu n tivesse mexido no width teria dado certo somente com o display flex */
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .hero-banner .maxwidth {
+    width: 75%;
+    /* eu utilizei esse width pro conteudo nao ficar ate no final pq estava com 100%, ai eu diminui pra 75% pra n ficar mt colado nas laterais */
+    margin: initial;
+    margin-bottom: 4em;
   }
 }
