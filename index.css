@@ -1,4 +1,53 @@
-.logo img {
-  display: block;
+:root {
+  --primary-color: #612674;
+}
+html {
+  font-family: sans-serif;
+}
+.maxwidth {
+  max-width: 70.25em;
+  /* aq eu falei q a largura maxima do meu header e 70.25, criei uma class dps de outra class só pra isso */
+}
+.main-header {
   text-align: center;
+}
+.main-nav {
+  background-color: var(--primary-color);
+}
+.main-nav ul {
+  list-style-type: none;
+  padding: 0;
+  /* sempre q for tirar os botao e zerar o padding tem q ser na ul */
+}
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  /* quando for começar a edição pelo mobile colocar o display block, pq por natural e elemento de line e um padding, e tem q ser pelo a pra ter a area clicavel no todo */
+}
+.main-nav a:hover {
+  background-color: color-mix(in srgb, var(--primary-color), white 10%);
+  /* o hover tem q ser no a pra a area clicavel ser tudo */
+}
+@media screen and (min-width: 48.75em) {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav {
+    background-color: initial;
+  }
+  .main-nav li {
+    display: inline-block;
+  }
+  .main-nav a {
+    color: var(--primary-color);
+  }
+  .main-nav a:hover {
+    background-color: color-mix(in srgb, var(--primary-color), white 90%);
+  }
+  .logo {
+    margin-left: 1.5em;
+  }
 }
