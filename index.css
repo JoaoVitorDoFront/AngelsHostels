@@ -225,4 +225,23 @@ p {
     /* ao usar o display flex eu alinhei os itens dentro do article tanto a img e o conteudo mas eu tive q designar q o main-content fosse meu pai e falei q o container type era inline size, o gap é só pra distanciar a img do conteudo */
     gap: 1.4em;
   }
+  .main-content_title {
+    margin-top: 0;
+  }
+  .main-content_img img {
+    max-height: 11.25em;
+  }
 }
+.footer {
+  background-color: rgb(30, 30, 83);
+  text-align: center;
+  padding: 2em;
+  color: color-mix(in srgb, black, white 40%);
+}
+/* .footer h4 {
+  font-size: 1em;
+}
+.footer p {
+  margin: 0;
+  padding-bottom: 1em;
+} */
